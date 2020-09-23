@@ -89,6 +89,34 @@ const LogIn = (props) => {
         e.preventDefault()
     }
 
+    const handlegoogleSignIn = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        firebase.auth().signInWithPopup(provider)
+            .then(res => {
+                // The signed-in user info.
+                const user = res.user;
+                const { displayName, email } = user
+                // ...
+                const signedInUser = { ...bookingInfo }
+                signedInUser.isSignedIn = true;
+                signedInUser.signedInName = displayName;
+                signedInUser.signedInEmail = email;
+                setBookingInfo(signedInUser)
+
+                history.replace(from)
+            }).catch(function (error) {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ...
+                console.log(errorMessage, errorCode)
+
+
+            });
+
+    }
+
 
     const updateUserInfo = (name) => {
         const user = firebase.auth().currentUser;
@@ -139,18 +167,12 @@ const LogIn = (props) => {
 
     const handleOnBlur = (e) => {
         const target = e.target;
-
         const isValid = validation(target);
         addingInfo(isValid, target)
 
     }
 
-    const movingSignUp = (signorlog) => {
-        const newUser = { ...bookingInfo }
-        newUser.signOrLog = signorlog;
-        setBookingInfo(newUser)
-        console.log(bookingInfo)
-    }
+
 
     return (
         <div className="logIn-form-container">
@@ -160,7 +182,7 @@ const LogIn = (props) => {
                 }
                 {!props.signUp &&
                     <div>
-                        <button className="auth-btn"><img style={{ width: "26px" }} src={googleIcon} alt="" /> <span>log In with google</span></button>
+                        <button onClick={handlegoogleSignIn} className=" auth-btn"><img style={{ width: "26px" }} src={googleIcon} alt="" /> <span>log In with google</span></button>
                         <button className="auth-btn"><img style={{ width: "26px" }} src={facebookIcon} alt="" /> <span>log In with Facebook</span></button>
                     </div>
                 }
@@ -203,7 +225,7 @@ const LogIn = (props) => {
                     </div>
                 </div>             <br />
                 {props.signUp ?
-                    <button className="btn" type="submit" >Sign Up</button> :
+                    <button  className="btn" type="submit" >Sign Up</button> :
                     <button className="btn" type="submit" >log In</button>
 
                 }

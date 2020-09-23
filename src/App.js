@@ -22,16 +22,14 @@ function App() {
       <BookingContext.Provider value={[bookingInfo, setBookingInfo]}>
         <Router>
           <Switch>
-            <Route exact  path="/" component={Home} />
-            <Route exact path="/map" component={MyMap} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/practice" component={practice} />
             <PrivateRoute path="/searchHotel/:id" >
-              <SearchHotel/>
-              </PrivateRoute>
-
+              <SearchHotel />
+            </PrivateRoute>
             <Route exact path="/login" component={LogIn} />
             <Route exact Path="/signUp" component={SignUp} />
-            <Route path="*" component={Home}/>
+            <Route path="*" component={Home} />
           </Switch>
 
         </Router>

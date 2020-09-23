@@ -1,12 +1,13 @@
 .form{
     background-color: white;
-    padding: 20px;
-    width: 70%;
+    padding: 30px;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     margin-left:40px ;
+    border-radius: 15px;
 }
 .form label{
     color: gray;
@@ -23,6 +24,7 @@
     color: black;
     border-radius: 10px;
     font-weight: bold;
+    background-color: rgba(0,0,0,.1);
 }
 .form button{
     width: 100%;

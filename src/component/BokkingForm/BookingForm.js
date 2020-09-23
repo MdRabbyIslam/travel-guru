@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import "./BookingForm.css"
 import "react-datepicker/dist/react-datepicker.css";
 import { BookingContext } from '../../App';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -18,13 +18,6 @@ const BookingForm = (props) => {
         destination:name,
         id:""
     })
-
-    // const [originText, setOriginText] = useState("Dhaka");
-    // const [destintionText, setDestinationText] = useState(name)
-    // const [update, setUpdate] = useState({})
-
-
-
 
     const handleOnChange = (event) => {
         event.preventDefault()
@@ -77,12 +70,7 @@ const BookingForm = (props) => {
                     </div>
                 </div>
                 <br />
-                <button type="submit">Submit</button>
-                {/* <button type="submit" className="Btn">
-
-                <Link style={{ width: "100%" }} to={`/searchHotel/${id}`}>Submit
-            </Link>
-            </button> */}
+                <button class="Btn" type="submit">Submit</button>
             </form>
         </div>
     )
