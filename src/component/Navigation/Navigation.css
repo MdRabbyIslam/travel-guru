@@ -1,0 +1,34 @@
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px;
+}
+.navigation a{
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo{
+    width: 120px;
+    background-color: white;
+}
+.Btn{
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    line-height: 1.5em;
+    padding: 5px 30px;
+}
+
+.navigation-links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+
+}

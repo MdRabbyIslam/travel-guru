@@ -1,0 +1,53 @@
+.form{
+    background-color: white;
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left:40px ;
+}
+.form label{
+    color: gray;
+    font-size: 20px;
+    line-height: 2em;
+    text-align: left;
+    
+}
+.form input{
+    padding: 10px 0 10px 10px;
+    width: 98%;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.form button{
+    width: 100%;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 20px;
+}
+
+.date-input{
+    position: relative;
+}
+
+.calander-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.date-calander{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+}
+.date-calander .start,.date-calander .end{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}

@@ -1,0 +1,64 @@
+.logIn-form-container{
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    /* background: linear-gradient(to right, #2bc0e4, #eaecc6); */
+    /*background: #ff6e7f;  fallback for old browsers
+background: -webkit-linear-gradient(to right, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #bfe9ff, #ff6e7f);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: url('../../Image/main/1758.jpg');
+background-size: cover;
+    
+}
+.log-in-form{
+    left: 150px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    border-radius: 15px;
+    padding: 2%;
+    box-shadow: -1px 3px 25px 0px rgba(138,131,138,1);
+    background-color: white;
+    text-align: left;
+    
+}
+.log-in-form input[type="text"],.log-in-form input[type="password"]{
+    font-size: 16px;
+    width: 98%;
+    font-weight: 500;
+    line-height:2em;
+    margin: 5% 0;
+    border-radius: 5px;
+    padding-left:5px;
+}
+
+.btn{
+    width: 100%;
+    font-size: 20px;
+    
+    font-weight: bold;
+    line-height: 1.5em;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+.log-in-form label{
+    color: gray;
+}
+.auth-btn{
+    width: 100%;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 25px 0;
+    border-radius: 10px;
+}
+.auth-btn span{
+    margin-left: 20px;
+}
+

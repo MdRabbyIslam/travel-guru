@@ -1,0 +1,23 @@
+.travel{
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+
+}
+.travel-short-info{
+    color: white;
+}
+.singleTravelDestImg{
+width: 100%; 
+position: relative;
+}
+.dest-img{
+    height: 400px;
+    width: 200px;
+}
+.dest-name{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
